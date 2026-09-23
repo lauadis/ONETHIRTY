@@ -7,6 +7,21 @@
     <title>ONETHIRTY</title>
     <meta name="description" content="ONETHIRTY — Music & Events">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Social Preview -->
+    <meta property="og:title" content="ONETHIRTY">
+    <meta property="og:description" content="Music & Events">
+    <meta property="og:image" content="https://onethirty.xyz/logo.png">
+    <meta property="og:url" content="https://onethirty.xyz">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ONETHIRTY">
+    <meta name="twitter:description" content="Music & Events">
+    <meta name="twitter:image" content="https://onethirty.xyz/logo.png">
+
     <style>
         * {
             box-sizing: border-box;
@@ -31,10 +46,29 @@
             width: min(75vw, 700px);
             height: auto;
             display: block;
+            opacity: 0;
+            animation: fadeIn 1.5s ease forwards;
+            transition: transform 0.4s ease;
         }
 
-        video {
-            max-width: 100%;
+        .logo:hover {
+            transform: scale(1.025);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .logo {
+                width: 88vw;
+            }
         }
     </style>
 </head>
